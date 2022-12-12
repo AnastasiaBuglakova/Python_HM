@@ -15,25 +15,25 @@
 #     print('It is not number from 1 to 7')
 
 # 2 Напишите программу для. проверки истинности утверждения ¬(X ⋁ Y ⋁ Z) = ¬X ⋀ ¬Y ⋀ ¬Z для всех значений предикат.
-# x = None
-# y = None
-# z = None
+x = None
+y = None
+z = None
 
-# for i in range(0, 2):
-#     if i == 0: x = False
-#     else: x= True
-#     for j in  range(0, 2):
-#         if j == 0: y = False
-#         else: y= True
-#         for k in  range(0, 2):
-#             if k == 0: z = False
-#             else: z= True
-#             a = not(x or y or z)
-#             b = (not (x)) and (not (y)) and (not (z))
-#             if a == b:
-#                 print('Доказано!')
-#             else:
-#                 print('Не вышло!')
+for i in range(0, 2):
+    if i == 0: x = False
+    else: x= True
+    for j in  range(0, 2):
+        if j == 0: y = False
+        else: y= True
+        for k in  range(0, 2):
+            if k == 0: z = False
+            else: z= True
+            a = not(x or y or z)
+            b = (not (x)) and (not (y)) and (not (z))
+            if a == b:
+                print('Доказано!')
+            else:
+                print('Не вышло!')
 
 # 3 Напишите программу, которая принимает на вход координаты точки (X и Y), причём X ≠ 0 и Y ≠ 0 и выдаёт номер четверти плоскости, в которой находится эта точка (или на какой оси она находится).
 # Пример:
