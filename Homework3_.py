@@ -81,11 +81,6 @@ def new_random_list_create():
 number = int(input('Please, enter a number: '))
 def Fib(num):
     num_list = []
-    # for i in range(1, num):
-    #     if i == 1 or i == 2:
-    #         num_list.append((-1)**(i+1))
-    #     else:
-    #         num_list.append(num_list[i-2]-num_list[i-1])
     for i in range(0, num+1):
         if i == 0 or i == 1:
             num_list.append(i)
