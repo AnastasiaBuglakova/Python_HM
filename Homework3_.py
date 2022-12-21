@@ -55,18 +55,48 @@ def new_random_list_create():
 
 # 4. **Напишите программу, которая будет преобразовывать десятичное число в двоичное.**
 # Пример:45 -> 101101
-# 3 -> 11
-# 2 -> 10
-number = int(input('Please, enter a number: '))
-print(f'{number} -> {bin(number)}')
+# # 3 -> 11
+# # 2 -> 10
+# number = int(input('Please, enter a number: '))
+# print(f'{number} -> {bin(number)}')
 
-def decimal_in_bin(num):
-    srting_bin =''
-    for i in range(0, 100):
-        pos = num % 2
-        num = num//2
-        srting_bin = str(pos) + srting_bin
-        if num == 0:
-            break
-    return str(number) + ' -> ' + '0b' + srting_bin
-print(decimal_in_bin(number))
+# def decimal_in_bin(num):
+#     srting_bin =''
+#     for i in range(0, 100):
+#         pos = num % 2
+#         num = num//2
+#         srting_bin = str(pos) + srting_bin
+#         if num == 0:
+#             break
+#     return str(number) + ' -> ' + '0b' + srting_bin
+# print(decimal_in_bin(number))
+# print(decimal_in_bin(45))
+# print(decimal_in_bin(3))
+# print(decimal_in_bin(2))
+
+# Задайте число. Составьте список чисел Фибоначчи, в том числе для отрицательных индексов.
+# Пример:
+# для k = 8 список будет выглядеть так: 
+# [-21 ,13, -8, 5, −3, 2, −1, 1, 0, 1, 1, 2, 3, 5, 8, 13, 21] Негафибоначчи
+number = int(input('Please, enter a number: '))
+def Fib(num):
+    num_list = []
+    # for i in range(1, num):
+    #     if i == 1 or i == 2:
+    #         num_list.append((-1)**(i+1))
+    #     else:
+    #         num_list.append(num_list[i-2]-num_list[i-1])
+    for i in range(0, num+1):
+        if i == 0 or i == 1:
+            num_list.append(i)
+        else:
+            num_list.append(int(num_list[i-1]+num_list[i-2]))
+    nega_num_list = []
+    for i in range(-num, num+1):
+        if i<0:
+            nega_num_list.append(int(((-1)**(i+1)) * num_list[-i]))
+        if i >= 0:
+            nega_num_list.append(num_list[i])
+    return nega_num_list
+
+print(Fib(number))
