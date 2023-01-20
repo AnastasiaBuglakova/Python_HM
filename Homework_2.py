@@ -3,27 +3,23 @@
 # Пример:
 # 6782 -> 23
 # 0,56 -> 11
-# num = input('Please, enter any number: ')
-# if ',' in num:
-#     num = num.replace(',', '.')
-# def sum_of_numbers(num):
-#     num_int= int(round(float(num),8))
-#     sum_integer=0
-#     for i in range(1, 10):
-#         sum_integer+=num_int%10
-#         num_int//=10
-#     if "." in num:
-#         integer, separate = num.split('.')
-#         separate = int(separate)
-#         sum_separate=0
-#         for i in range(1, 10):
-#             sum_separate+=separate%10
-#             separate//=10
-#     else:
-#         sum_separate = 0
-#     sum = sum_integer + sum_separate
-#     return sum
-# print(sum_of_numbers(num))
+num = input('Please, enter any number: ')
+if ',' in num:
+    num = num.replace(',', '.')
+def sum_of_numbers(num):
+    num_int= int(float(num))
+    sum=0
+    for i in range(1, 10):
+        sum+=num_int%10
+        num_int//=10
+    if "." in num:
+        integer, separate = num.split('.')
+        separate = int(separate)
+        for i in range(1, 10):
+            sum+=separate%10
+            separate//=10
+    return sum
+print(sum_of_numbers(num))
 
 
 # 2 Задайте список из n чисел последовательности (1 + 1/n)**n, выведеите его на экран, 
@@ -49,9 +45,7 @@
 my_list = []
 for i in range(0, 10):
     import random
-    new_item =''
-    new_item = str(random.randint(0,99))+'.'+str(random.randint(0,99))
-    my_list.append(new_item)
+    my_list.append(str(random.randint(0,99))+'.'+str(random.randint(0,99)))
 print(my_list)
 for j in range (0, len(my_list)*5):
     for i in range(0, len(my_list)-1):
